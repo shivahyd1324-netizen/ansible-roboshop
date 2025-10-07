@@ -8,10 +8,10 @@
     zone_id: "Z06389611OU10AAAZ9KX3"
     domain_name: "shivadevops86s.fun"
     instances:
-      - mongodb
-      - redis
-      - mysql
-      - rabbitmq
+    - mongodb
+    - redis
+    - mysql
+    - rabbitmq
 
   tasks:
   - name: create ec2 instance

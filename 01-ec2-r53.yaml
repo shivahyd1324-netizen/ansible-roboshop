@@ -7,9 +7,9 @@
     sg_id: sg-0edebc35c18e275be 
     zone_id: "Z06389611OU10AAAZ9KX3"
     domain_name: "shivadevops86s.fun"
-    # instances:
-    #  - mongodb
-    #  - redis
+    instances:
+      - mongodb
+      - redis
     #  - mysql
     #  - rabbitmq
 

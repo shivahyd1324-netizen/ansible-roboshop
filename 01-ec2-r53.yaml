@@ -1,18 +1,17 @@
-
-- name: create ec2 r53
+- name: create ec2 and r53
   hosts: local
   connection: local
   vars:
     ami_id: ami-09c813fb71547fc4f
-    sg_id: sg-0edebc35c18e275be 
-    zone_id: "Z06389611OU10AAAZ9KX3"
+    sg_id: sg-0edebc35c18e275be # replace with your SG ID
+    zone_id: "Z06389611OU10AAAZ9KX3" # replace with your ID
     domain_name: "shivadevops86s.fun"
-    instances:
+    we can pass instances through command line using -e
+    instances: 
     - mongodb
     - redis
     - mysql
     - rabbitmq
-
   tasks:
   - name: create ec2 instance
     amazon.aws.ec2_instance:
@@ -28,7 +27,6 @@
   - name: print the ec2_output
     ansible.builtin.debug:
       msg: "{{ ec2_output }}"
-
 
   - name: print public_ip
     ansible.builtin.debug: 

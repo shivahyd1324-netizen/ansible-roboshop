@@ -1,0 +1,19 @@
+- name: create ec2 r53
+  hosts: local
+  connection: local
+  vars:
+    ami_id: ami-09c813fb71547fc4f
+    sg_id: sg-0edebc35c18e275be 
+    zone_id: Z06389611OU10AAAZ9KX3
+    domain_name: "shivadevops86s.fun"
+    instances:
+    - mongodb
+  tasks:
+  - name: create ec2 instance
+    amazon.aws.ec2_instance:
+      name: "{{ item }}"
+      instance_type: t3.micro
+      security_group: "{{ sg_id }}"
+      image_id: "{{ ami_id }}"
+    loop: "{{ instances }}"
+       

@@ -6,7 +6,6 @@
     sg_id: sg-0edebc35c18e275be  # replace with your SG ID
     zone_id: "Z06389611OU10AAAZ9KX3" # replace with your ID
     domain_name: "shivadevops86s.fun"
-    # we can pass instances through command line using -e
     instances: 
     - mongodb
     # - redis

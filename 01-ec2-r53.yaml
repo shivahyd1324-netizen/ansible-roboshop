@@ -47,3 +47,8 @@
       value: "{{ item.instances[0].private_ip_address }}"
       overwrite: true
     loop: "{{ ec2_output.results }}"
+
+
+
+    # ee command tho instance kuda create cheya vachu
+    #  ansible-playbook -i inventry.ini 01-ec2-r53.yaml -e "instances=['catalogue','user','cart']"

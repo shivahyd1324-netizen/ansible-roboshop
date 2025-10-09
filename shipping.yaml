@@ -11,13 +11,13 @@
     - maven
     - mysql
 
-  - name: instamm mysql python libraries
-    ansible.builtin.pip:
-      excutable: pip3.9
-      name: "{{ item }}"
-    loop:
-    - cryptography
-    - PyMySQL
+  # - name: instamm mysql python libraries
+  #   ansible.builtin.pip:
+  #     excutable: pip3.9
+  #     name: "{{ item }}"
+  #   loop:
+  #   - cryptography
+  #   - PyMySQL
 
   - name: create roboshop system user
     ansible.builtin.user:

@@ -61,7 +61,7 @@
       dest: /etc/systemd/system/shipping.service
 
   - name: import shipping data into mysql
-    community.mysql.,mysql_db:
+    community.mysql.mysql_db:
       name: all
       login_host: mysql.shivadevops86s.fun
       login_user: root

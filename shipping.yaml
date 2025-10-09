@@ -45,7 +45,7 @@
       dest: /app
       remote_src: yes 
 
-  - nmae: install dependencies
+  - name: install dependencies
     ansible.builtin.command: mvn clean package 
     args:
       chdir: /app
@@ -54,7 +54,7 @@
     ansible.builtin.command: mv target/shipping-1.0.jar shipping.jar
     args:
       chdir: /app
-      
+
   - name: copy shipping service
     ansible.builtin.copy:
       src: shipping.service
@@ -72,3 +72,11 @@
     - /app/db/schema.sql
     - /app/db/app-user.sql 
     - /app/db/master-data.sql
+
+
+  - name: daemon reload enable and start
+    ansible.builtin.systemd_service:
+      name: shipping
+      enabled: true
+      state: started
+      daemon_reload: true

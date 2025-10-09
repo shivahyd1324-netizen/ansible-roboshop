@@ -52,3 +52,6 @@
 
     # ee command tho instance kuda create cheya vachu
     #  ansible-playbook -i inventry.ini 01-ec2-r53.yaml -e "instances=['catalogue','user','cart']"
+
+
+  #  ansible-playbook -i inventry.ini 01-ec2-r53.yaml -e "instances=['catalogue','user','cart','payment']"
